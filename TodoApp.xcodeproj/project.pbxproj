@@ -21,6 +21,8 @@
 		4C5AD8E619929D5200CCD811 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C5AD8C819929D5200CCD811 /* UIKit.framework */; };
 		4C5AD8EE19929D5200CCD811 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C5AD8EC19929D5200CCD811 /* InfoPlist.strings */; };
 		4C5AD8F019929D5200CCD811 /* TodoAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5AD8EF19929D5200CCD811 /* TodoAppTests.m */; };
+		4C5AD8FB1992A6DC00CCD811 /* TATask.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5AD8FA1992A6DC00CCD811 /* TATask.m */; };
+		4C5AD8FE1992A9AA00CCD811 /* TATaskListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5AD8FD1992A9AA00CCD811 /* TATaskListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		4C5AD8EB19929D5200CCD811 /* TodoAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TodoAppTests-Info.plist"; sourceTree = "<group>"; };
 		4C5AD8ED19929D5200CCD811 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4C5AD8EF19929D5200CCD811 /* TodoAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodoAppTests.m; sourceTree = "<group>"; };
+		4C5AD8F91992A6DC00CCD811 /* TATask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TATask.h; sourceTree = "<group>"; };
+		4C5AD8FA1992A6DC00CCD811 /* TATask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TATask.m; sourceTree = "<group>"; };
+		4C5AD8FC1992A9AA00CCD811 /* TATaskListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TATaskListViewController.h; sourceTree = "<group>"; };
+		4C5AD8FD1992A9AA00CCD811 /* TATaskListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TATaskListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +125,10 @@
 				4C5AD8DA19929D5200CCD811 /* ViewController.m */,
 				4C5AD8DC19929D5200CCD811 /* Images.xcassets */,
 				4C5AD8CB19929D5200CCD811 /* Supporting Files */,
+				4C5AD8F91992A6DC00CCD811 /* TATask.h */,
+				4C5AD8FA1992A6DC00CCD811 /* TATask.m */,
+				4C5AD8FC1992A9AA00CCD811 /* TATaskListViewController.h */,
+				4C5AD8FD1992A9AA00CCD811 /* TATaskListViewController.m */,
 			);
 			path = TodoApp;
 			sourceTree = "<group>";
@@ -252,6 +262,8 @@
 				4C5AD8DB19929D5200CCD811 /* ViewController.m in Sources */,
 				4C5AD8D519929D5200CCD811 /* AppDelegate.m in Sources */,
 				4C5AD8D119929D5200CCD811 /* main.m in Sources */,
+				4C5AD8FE1992A9AA00CCD811 /* TATaskListViewController.m in Sources */,
+				4C5AD8FB1992A6DC00CCD811 /* TATask.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
