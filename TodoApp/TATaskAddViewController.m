@@ -7,6 +7,9 @@
 //
 
 #import "TATaskAddViewController.h"
+#import "TATaskListViewController.h"
+#import "TATask.h"
+
 
 @interface TATaskAddViewController ()
 
@@ -15,6 +18,7 @@
 @implementation TATaskAddViewController
 
 @synthesize nameField = _nameField;
+@synthesize taskListViewController = _taskListViewController;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -51,7 +55,10 @@
 }
 
 - (void) doneButtonPressed:(id)sender {
+    TATask *newTask = [[TATask alloc] initWithName:self.nameField.text done:NO];
+    [self.taskListViewController.tasks addObject:newTask];
     [self dismissModalViewControllerAnimated:YES];
+    [self.taskListViewController.tableView reloadData];
 }
 
 @end

@@ -60,7 +60,7 @@
                     <navigationItem key="navigationItem" title="Tasks" id="ure-jw-UGr">
                         <barButtonItem key="rightBarButtonItem" title="Item" systemItem="add" id="VgX-RW-VvH">
                             <connections>
-                                <segue destination="j5o-zF-bgQ" kind="modal" id="R5J-IM-zqB"/>
+                                <segue destination="j5o-zF-bgQ" kind="modal" identifier="AddTaskSegue" id="R5J-IM-zqB"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -116,6 +116,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="nameField" destination="cjb-xy-kg3" id="gMg-kD-y42"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PwD-dI-Wft" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -8,6 +8,7 @@
 
 #import "TATaskListViewController.h"
 #import "TATask.h"
+#import "TATaskAddViewController.h"
 
 @interface TATaskListViewController ()
 
@@ -52,6 +53,14 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"AddTaskSegue"]) {
+        UINavigationController *navCon = segue.destinationViewController;
+        TATaskAddViewController *addTaskViewController = [navCon.viewControllers objectAtIndex:0];
+        addTaskViewController.taskListViewController = self;
+    }
 }
 
 #pragma mark - Table view data source
