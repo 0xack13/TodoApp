@@ -23,6 +23,7 @@
 		4C5AD8F019929D5200CCD811 /* TodoAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5AD8EF19929D5200CCD811 /* TodoAppTests.m */; };
 		4C5AD8FB1992A6DC00CCD811 /* TATask.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5AD8FA1992A6DC00CCD811 /* TATask.m */; };
 		4C5AD8FE1992A9AA00CCD811 /* TATaskListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5AD8FD1992A9AA00CCD811 /* TATaskListViewController.m */; };
+		4C5AD9011992B96900CCD811 /* TATaskAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5AD9001992B96900CCD811 /* TATaskAddViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		4C5AD8FA1992A6DC00CCD811 /* TATask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TATask.m; sourceTree = "<group>"; };
 		4C5AD8FC1992A9AA00CCD811 /* TATaskListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TATaskListViewController.h; sourceTree = "<group>"; };
 		4C5AD8FD1992A9AA00CCD811 /* TATaskListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TATaskListViewController.m; sourceTree = "<group>"; };
+		4C5AD8FF1992B96900CCD811 /* TATaskAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TATaskAddViewController.h; sourceTree = "<group>"; };
+		4C5AD9001992B96900CCD811 /* TATaskAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TATaskAddViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +132,8 @@
 				4C5AD8FA1992A6DC00CCD811 /* TATask.m */,
 				4C5AD8FC1992A9AA00CCD811 /* TATaskListViewController.h */,
 				4C5AD8FD1992A9AA00CCD811 /* TATaskListViewController.m */,
+				4C5AD8FF1992B96900CCD811 /* TATaskAddViewController.h */,
+				4C5AD9001992B96900CCD811 /* TATaskAddViewController.m */,
 			);
 			path = TodoApp;
 			sourceTree = "<group>";
@@ -263,6 +268,7 @@
 				4C5AD8D519929D5200CCD811 /* AppDelegate.m in Sources */,
 				4C5AD8D119929D5200CCD811 /* main.m in Sources */,
 				4C5AD8FE1992A9AA00CCD811 /* TATaskListViewController.m in Sources */,
+				4C5AD9011992B96900CCD811 /* TATaskAddViewController.m in Sources */,
 				4C5AD8FB1992A6DC00CCD811 /* TATask.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

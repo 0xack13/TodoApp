@@ -69,10 +69,10 @@
             </objects>
             <point key="canvasLocation" x="1040" y="121"/>
         </scene>
-        <!--Table View Controller - Add Task-->
+        <!--Task Add View Controller - Add Task-->
         <scene sceneID="Ia3-P4-ydt">
             <objects>
-                <tableViewController id="xdT-q1-MfN" sceneMemberID="viewController">
+                <tableViewController id="xdT-q1-MfN" customClass="TATaskAddViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="H5g-0T-chn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -105,8 +105,16 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Add Task" id="mid-0r-LoR">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="toV-Ws-yyp"/>
-                        <barButtonItem key="rightBarButtonItem" title="Done" systemItem="done" id="krw-3B-llY"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="toV-Ws-yyp">
+                            <connections>
+                                <action selector="cancelButtonPressed:" destination="xdT-q1-MfN" id="vMK-IG-1Sv"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Done" systemItem="done" id="krw-3B-llY">
+                            <connections>
+                                <action selector="doneButtonPressed:" destination="xdT-q1-MfN" id="QuH-Rp-yJK"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PwD-dI-Wft" userLabel="First Responder" sceneMemberID="firstResponder"/>
