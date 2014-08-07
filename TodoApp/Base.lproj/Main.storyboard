@@ -124,10 +124,10 @@
             </objects>
             <point key="canvasLocation" x="2303" y="-218"/>
         </scene>
-        <!--Table View Controller - Edit Task-->
+        <!--Task Edit View Controller - Edit Task-->
         <scene sceneID="zTQ-eP-Ixc">
             <objects>
-                <tableViewController id="qTR-aB-Kfl" sceneMemberID="viewController">
+                <tableViewController id="qTR-aB-Kfl" customClass="TATaskEditViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="ZxF-tB-gO7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -24,6 +24,7 @@
 		4C5AD8FB1992A6DC00CCD811 /* TATask.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5AD8FA1992A6DC00CCD811 /* TATask.m */; };
 		4C5AD8FE1992A9AA00CCD811 /* TATaskListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5AD8FD1992A9AA00CCD811 /* TATaskListViewController.m */; };
 		4C5AD9011992B96900CCD811 /* TATaskAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5AD9001992B96900CCD811 /* TATaskAddViewController.m */; };
+		4C5AD90419930DD000CCD811 /* TATaskEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5AD90319930DD000CCD811 /* TATaskEditViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		4C5AD8FD1992A9AA00CCD811 /* TATaskListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TATaskListViewController.m; sourceTree = "<group>"; };
 		4C5AD8FF1992B96900CCD811 /* TATaskAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TATaskAddViewController.h; sourceTree = "<group>"; };
 		4C5AD9001992B96900CCD811 /* TATaskAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TATaskAddViewController.m; sourceTree = "<group>"; };
+		4C5AD90219930DD000CCD811 /* TATaskEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TATaskEditViewController.h; path = ../TATaskEditViewController.h; sourceTree = "<group>"; };
+		4C5AD90319930DD000CCD811 /* TATaskEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TATaskEditViewController.m; path = ../TATaskEditViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +124,8 @@
 		4C5AD8CA19929D5200CCD811 /* TodoApp */ = {
 			isa = PBXGroup;
 			children = (
+				4C5AD90219930DD000CCD811 /* TATaskEditViewController.h */,
+				4C5AD90319930DD000CCD811 /* TATaskEditViewController.m */,
 				4C5AD8D319929D5200CCD811 /* AppDelegate.h */,
 				4C5AD8D419929D5200CCD811 /* AppDelegate.m */,
 				4C5AD8D619929D5200CCD811 /* Main.storyboard */,
@@ -265,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C5AD8DB19929D5200CCD811 /* ViewController.m in Sources */,
+				4C5AD90419930DD000CCD811 /* TATaskEditViewController.m in Sources */,
 				4C5AD8D519929D5200CCD811 /* AppDelegate.m in Sources */,
 				4C5AD8D119929D5200CCD811 /* main.m in Sources */,
 				4C5AD8FE1992A9AA00CCD811 /* TATaskListViewController.m in Sources */,
