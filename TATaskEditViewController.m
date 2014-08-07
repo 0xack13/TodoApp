@@ -7,12 +7,17 @@
 //
 
 #import "TATaskEditViewController.h"
+#import "TATask.h"
 
 @interface TATaskEditViewController ()
 
 @end
 
 @implementation TATaskEditViewController
+
+@synthesize nameField = _nameField;
+@synthesize doneSwitch = _doneSwitch;
+@synthesize task = _task;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -32,6 +37,9 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    self.nameField.text = self.task.name;
+    [self.doneSwitch setOn:self.task.done];
 }
 
 - (void)didReceiveMemoryWarning
@@ -40,6 +48,11 @@
     // Dispose of any resources that can be recreated.
 }
 
-
+#pragma mark - IBActions
+- (void) taskDataChanged:(id)sender {
+    self.task.name = self.nameField.text;
+    self.task.done = self.doneSwitch.isOn;
+    
+}
 
 @end

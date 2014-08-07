@@ -9,6 +9,7 @@
 #import "TATaskListViewController.h"
 #import "TATask.h"
 #import "TATaskAddViewController.h"
+#import "TATaskEditViewController.h"
 
 @interface TATaskListViewController ()
 
@@ -60,6 +61,9 @@
         UINavigationController *navCon = segue.destinationViewController;
         TATaskAddViewController *addTaskViewController = [navCon.viewControllers objectAtIndex:0];
         addTaskViewController.taskListViewController = self;
+    } else if ([segue.identifier isEqualToString:@"EditNotDoneTaskSegue"] || [segue.identifier isEqualToString:@"EditDoneTaskSegue"]) {
+        TATaskEditViewController *editTaskViewController = segue.destinationViewController;
+        editTaskViewController.task = [self.tasks objectAtIndex:self.tableView.indexPathForSelectedRow.row];
     }
 }
 

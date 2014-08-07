@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@class TATask;
+
 @interface TATaskEditViewController : UITableViewController
+
+@property (nonatomic, strong) IBOutlet UITextField *nameField;
+@property (nonatomic, strong) IBOutlet UISwitch *doneSwitch;
+@property (nonatomic, strong) TATask *task;
+
+- (IBAction) taskDataChanged:(id)sender;
 
 @end
