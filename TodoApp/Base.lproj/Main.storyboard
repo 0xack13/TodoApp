@@ -61,6 +61,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Tasks" id="ure-jw-UGr">
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="beZ-Lj-9Xb">
+                            <connections>
+                                <action selector="editButtonPressed:" destination="Mra-bp-OKi" id="tkX-HQ-OLH"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" systemItem="add" id="VgX-RW-VvH">
                             <connections>
                                 <segue destination="j5o-zF-bgQ" kind="modal" identifier="AddTaskSegue" id="R5J-IM-zqB"/>

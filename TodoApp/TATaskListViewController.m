@@ -118,21 +118,21 @@
     }   
 }
 
-/*
 // Override to support rearranging the table view.
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
 {
+    TATask *movedTask = [self.tasks objectAtIndex:fromIndexPath.row];
+    [self.tasks removeObjectAtIndex:fromIndexPath.row];
+    [self.tasks insertObject:movedTask atIndex:toIndexPath.row];
 }
-*/
 
-/*
+
 // Override to support conditional rearranging of the table view.
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the item to be re-orderable.
     return YES;
 }
-*/
 
 /*
 #pragma mark - Navigation
@@ -145,5 +145,10 @@
 }
 
  */
+
+#pragma mark - IBActions
+- (void) editButtonPressed:(id)sender {
+    self.editing = !self.editing;
+}
 
 @end
