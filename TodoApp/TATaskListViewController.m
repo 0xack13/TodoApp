@@ -46,12 +46,6 @@
     
     self.tasks = [[NSMutableArray alloc] init];
     
-    TATask *task = [[TATask alloc] initWithName:@"Hello there" done:NO];
-    [self.tasks addObject:task];
-    
-    TATask *doneTask = [[TATask alloc] initWithName:@"This is done!" done:YES];
-    [self.tasks addObject:doneTask];
-    
     [self.tableView reloadData];
 }
 
