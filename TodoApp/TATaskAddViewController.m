@@ -50,14 +50,14 @@
 #pragma mark - IBActions
 
 - (void) cancelButtonPressed:(id)sender {
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:Nil];
     
 }
 
 - (void) doneButtonPressed:(id)sender {
     TATask *newTask = [[TATask alloc] initWithName:self.nameField.text done:NO];
     [self.taskListViewController.tasks addObject:newTask];
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
     [self.taskListViewController.tableView reloadData];
 }
 
