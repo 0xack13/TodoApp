@@ -77,6 +77,8 @@
     //  2
     newEntry.title = self.nameField.text;
     newEntry.isDone = NO;
+    newEntry.created = [NSDate date];
+
     
     //  3
     NSError *error;
