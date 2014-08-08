@@ -9,9 +9,15 @@
 #import "TATaskAddViewController.h"
 #import "TATaskListViewController.h"
 #import "TATask.h"
+#import "AppDelegate.h"
+#import "TATaskEntity.h"
 
 
 @interface TATaskAddViewController ()
+
+
+@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+
 
 @end
 
@@ -38,6 +44,11 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    //Coredata: 1
+    AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
+    //CoreData: 2
+    self.managedObjectContext = appDelegate.managedObjectContext;
 }
 
 - (void)didReceiveMemoryWarning
@@ -57,6 +68,26 @@
 - (void) doneButtonPressed:(id)sender {
     TATask *newTask = [[TATask alloc] initWithName:self.nameField.text done:NO];
     [self.taskListViewController.tasks addObject:newTask];
+    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.taskListViewController.tableView reloadData];
+    
+    //  1
+    TATaskEntity *newEntry = [NSEntityDescription insertNewObjectForEntityForName:@"TATaskEntity"
+                                                      inManagedObjectContext:self.managedObjectContext];
+    //  2
+    newEntry.title = self.nameField.text;
+    newEntry.isDone = NO;
+    
+    //  3
+    NSError *error;
+    if (![self.managedObjectContext save:&error]) {
+        NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+    }
+    //  4
+    self.nameField.text = @"";
+    
+    //  5
+    [self.view endEditing:YES];
     [self dismissViewControllerAnimated:YES completion:nil];
     [self.taskListViewController.tableView reloadData];
 }
