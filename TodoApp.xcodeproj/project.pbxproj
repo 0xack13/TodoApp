@@ -26,6 +26,7 @@
 		4C5AD9011992B96900CCD811 /* TATaskAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5AD9001992B96900CCD811 /* TATaskAddViewController.m */; };
 		4C5AD90419930DD000CCD811 /* TATaskEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5AD90319930DD000CCD811 /* TATaskEditViewController.m */; };
 		4C5AD906199463A000CCD811 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C5AD905199463A000CCD811 /* CoreData.framework */; };
+		4C5AD909199475AB00CCD811 /* TodoApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4C5AD907199475AB00CCD811 /* TodoApp.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		4C5AD90219930DD000CCD811 /* TATaskEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TATaskEditViewController.h; path = ../TATaskEditViewController.h; sourceTree = "<group>"; };
 		4C5AD90319930DD000CCD811 /* TATaskEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TATaskEditViewController.m; path = ../TATaskEditViewController.m; sourceTree = "<group>"; };
 		4C5AD905199463A000CCD811 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		4C5AD908199475AB00CCD811 /* TodoApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TodoApp.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 				4C5AD8FD1992A9AA00CCD811 /* TATaskListViewController.m */,
 				4C5AD8FF1992B96900CCD811 /* TATaskAddViewController.h */,
 				4C5AD9001992B96900CCD811 /* TATaskAddViewController.m */,
+				4C5AD907199475AB00CCD811 /* TodoApp.xcdatamodeld */,
 			);
 			path = TodoApp;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				4C5AD8DB19929D5200CCD811 /* ViewController.m in Sources */,
 				4C5AD90419930DD000CCD811 /* TATaskEditViewController.m in Sources */,
 				4C5AD8D519929D5200CCD811 /* AppDelegate.m in Sources */,
+				4C5AD909199475AB00CCD811 /* TodoApp.xcdatamodeld in Sources */,
 				4C5AD8D119929D5200CCD811 /* main.m in Sources */,
 				4C5AD8FE1992A9AA00CCD811 /* TATaskListViewController.m in Sources */,
 				4C5AD9011992B96900CCD811 /* TATaskAddViewController.m in Sources */,
@@ -498,6 +502,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4C5AD907199475AB00CCD811 /* TodoApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4C5AD908199475AB00CCD811 /* TodoApp.xcdatamodel */,
+			);
+			currentVersion = 4C5AD908199475AB00CCD811 /* TodoApp.xcdatamodel */;
+			path = TodoApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4C5AD8B919929D5100CCD811 /* Project object */;
 }
