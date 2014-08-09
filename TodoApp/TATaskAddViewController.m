@@ -88,6 +88,9 @@
     //  4
     self.nameField.text = @"";
     
+    AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
+    self.taskListViewController.fetchedTasksArray = [appDelegate getAllTasks];
+    
     //  5
     [self.view endEditing:YES];
     [self dismissViewControllerAnimated:YES completion:nil];

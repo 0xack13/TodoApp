@@ -18,6 +18,7 @@
 @implementation TATaskListViewController
 
 @synthesize tasks = _tasks;
+@synthesize fetchedTasksArray = _fetchedTasksArray;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -31,6 +32,11 @@
 
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    //[self.tableView reloadData];
+    AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
+    
+    // Fetching Tasks and saving it in "fetchedTasksArray" object
+    self.fetchedTasksArray = [appDelegate getAllTasks];
     [self.tableView reloadData];
 }
 
