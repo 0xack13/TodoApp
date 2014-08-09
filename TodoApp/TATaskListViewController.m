@@ -99,10 +99,14 @@
     NSString *cellIdetifier = currentTask.isDone ? DoneCellIdentifier : NotDoneCellIdentifier;
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdetifier forIndexPath:indexPath];
-    
     // Configure the cell...
     //cell.textLabel.text = currentTask.name;
-    cell.textLabel.text = [NSString stringWithFormat:@"%@ %@, %@ ",currentTask.title,currentTask.isDone,currentTask.created];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@",currentTask.title];
+    NSDateFormatter *format = [[NSDateFormatter alloc] init];
+    [format setDateStyle:NSDateFormatterMediumStyle];
+    [format setTimeStyle:NSDateFormatterNoStyle];
+    NSString *taskDate= [format stringFromDate:currentTask.created];
+    [cell.detailTextLabel setText:taskDate];
 
     
     return cell;
