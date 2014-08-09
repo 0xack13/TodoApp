@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppDelegate.h"
+#import "TATaskEntity.h"
 
 @interface TATaskListViewController : UITableViewController
 
 @property (nonatomic, strong) NSMutableArray *tasks;
+@property (nonatomic,strong)NSArray* fetchedTasksArray;
 
 - (IBAction)editButtonPressed:(id)sender;
 

@@ -44,8 +44,15 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    self.tasks = [[NSMutableArray alloc] init];
+    //self.tasks = [[NSMutableArray alloc] init];
     
+    //[self.tableView reloadData];
+    
+    
+    AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
+    
+    // Fetching Tasks and saving it in "fetchedTasksArray" object
+    self.fetchedTasksArray = [appDelegate getAllTasks];
     [self.tableView reloadData];
 }
 
@@ -75,7 +82,9 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.tasks.count;
+    //return self.tasks.count;
+    
+    return [self.fetchedTasksArray count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -83,16 +92,22 @@
     static NSString *NotDoneCellIdentifier = @"NotDoneTaskCell";
     static NSString *DoneCellIdentifier = @"DoneTaskCell";
     
-    TATask *currentTask = [self.tasks objectAtIndex:indexPath.row];
+    //TATask *currentTask = [self.tasks objectAtIndex:indexPath.row];
+    TATaskEntity *currentTask = [self.fetchedTasksArray objectAtIndex:indexPath.row];
     
-    NSString *cellIdetifier = currentTask.done ? DoneCellIdentifier : NotDoneCellIdentifier;
+    //NSString *cellIdetifier = currentTask.done ? DoneCellIdentifier : NotDoneCellIdentifier;
+    NSString *cellIdetifier = currentTask.isDone ? DoneCellIdentifier : NotDoneCellIdentifier;
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdetifier forIndexPath:indexPath];
     
     // Configure the cell...
-    cell.textLabel.text = currentTask.name;
+    //cell.textLabel.text = currentTask.name;
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ %@, %@ ",currentTask.title,currentTask.isDone,currentTask.created];
+
     
     return cell;
+    
+    
 }
 
 /*
