@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TATaskEntity.h"
 
 @class TATask;
 
@@ -15,6 +16,7 @@
 @property (nonatomic, strong) IBOutlet UITextField *nameField;
 @property (nonatomic, strong) IBOutlet UISwitch *doneSwitch;
 @property (nonatomic, strong) TATask *task;
+@property (nonatomic, strong) TATaskEntity *taskEntity;
 
 - (IBAction) taskDataChanged:(id)sender;
 

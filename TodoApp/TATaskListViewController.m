@@ -76,6 +76,7 @@
     } else if ([segue.identifier isEqualToString:@"EditNotDoneTaskSegue"] || [segue.identifier isEqualToString:@"EditDoneTaskSegue"]) {
         TATaskEditViewController *editTaskViewController = segue.destinationViewController;
         editTaskViewController.task = [self.tasks objectAtIndex:self.tableView.indexPathForSelectedRow.row];
+        editTaskViewController.taskEntity = [self.fetchedTasksArray objectAtIndex:self.tableView.indexPathForSelectedRow.row];
     }
 }
 

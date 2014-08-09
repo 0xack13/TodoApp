@@ -18,6 +18,7 @@
 @synthesize nameField = _nameField;
 @synthesize doneSwitch = _doneSwitch;
 @synthesize task = _task;
+@synthesize taskEntity = _taskEntity;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -38,8 +39,12 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    self.nameField.text = self.task.name;
-    [self.doneSwitch setOn:self.task.done];
+    //Without Core Data
+    //self.nameField.text = self.task.name;
+    //[self.doneSwitch setOn:self.task.done];
+    
+    self.nameField.text = self.taskEntity.title;
+    [self.doneSwitch setOn:self.taskEntity.isDone];
 }
 
 - (void)didReceiveMemoryWarning
@@ -50,9 +55,11 @@
 
 #pragma mark - IBActions
 - (void) taskDataChanged:(id)sender {
-    self.task.name = self.nameField.text;
-    self.task.done = self.doneSwitch.isOn;
+    //self.task.name = self.nameField.text;
+    //self.task.done = self.doneSwitch.isOn;
     
+    self.taskEntity.title = self.nameField.text;
+    self.taskEntity.isDone = [NSNumber numberWithBool:self.doneSwitch.isOn];
 }
 
 @end
