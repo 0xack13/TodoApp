@@ -13,6 +13,9 @@
 
 @interface TATaskListViewController ()
 
+@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+
+
 @end
 
 @implementation TATaskListViewController
@@ -135,9 +138,43 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
+        /*
+        AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
+        //CoreData: 2
+        self.managedObjectContext = appDelegate.managedObjectContext;
+        
+        [self.managedObjectContext deleteObject:[self.fetchedTasksArray objectAtIndex:indexPath.row]];
+        NSError *error = nil;
+        if (![self.managedObjectContext save:&error]) {
+            NSLog(@"Can't Delete! %@ %@", error, [error localizedDescription]);
+            return;
+        }
+        
         // Delete the row from the data source
-        [self.tasks removeObjectAtIndex:indexPath.row];
+        //[self.tasks removeObjectAtIndex:indexPath.row];
+        [self.tableView reloadData];
+        self.editing = YES;
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+         */
+        
+        [tableView beginUpdates];
+        // Delete the row from the data source
+        AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
+        self.managedObjectContext = appDelegate.managedObjectContext;
+        //    2
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        
+        //    3
+        [self.managedObjectContext deleteObject:[self.fetchedTasksArray objectAtIndex:indexPath.row]];
+        NSError *error;
+        if (![self.managedObjectContext save:&error]) {
+            NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+        }
+        //    4
+        //AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
+        self.fetchedTasksArray = [appDelegate getAllTasks];
+        //    5
+        [tableView endUpdates];
     }   
     else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
@@ -147,9 +184,10 @@
 // Override to support rearranging the table view.
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
 {
-    TATask *movedTask = [self.tasks objectAtIndex:fromIndexPath.row];
+    /*
+    TATask *movedTask = [self.fetchedTasksArray objectAtIndex:fromIndexPath.row];
     [self.tasks removeObjectAtIndex:fromIndexPath.row];
-    [self.tasks insertObject:movedTask atIndex:toIndexPath.row];
+    [self.tasks insertObject:movedTask atIndex:toIndexPath.row];*/
 }
 
 

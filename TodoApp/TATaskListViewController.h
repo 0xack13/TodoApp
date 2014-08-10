@@ -13,7 +13,7 @@
 @interface TATaskListViewController : UITableViewController
 
 @property (nonatomic, strong) NSMutableArray *tasks;
-@property (nonatomic,strong)NSArray* fetchedTasksArray;
+@property (nonatomic,strong) NSArray* fetchedTasksArray;
 
 - (IBAction)editButtonPressed:(id)sender;
 
